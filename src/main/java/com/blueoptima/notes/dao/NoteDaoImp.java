@@ -41,7 +41,7 @@ public class NoteDaoImp implements NoteDao{
 
     @Override
     public void createNote(Note note) {
-        LocalTime now = LocalTime.now();
+        LocalTime now = LocalTime.now(ZoneId.of("America/Mexico_City"));
 
         note.setCreatedAt(now);
         note.setUpdatedAt(now);
@@ -63,7 +63,7 @@ public class NoteDaoImp implements NoteDao{
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         CriteriaUpdate<Note> update = criteriaBuilder.createCriteriaUpdate(Note.class);
         Root<Note> root = update.from(Note.class);
-        LocalTime now = LocalTime.now();
+        LocalTime now = LocalTime.now(ZoneId.of("America/Mexico_City"));
 
         update.set("updatedAt", now);
         entityManager.createQuery(update).executeUpdate();
