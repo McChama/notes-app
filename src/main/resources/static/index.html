@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>Notes manager</title>
+
+
+  <!-- Buttons -->
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet" />
+
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"></script>
+
+  <meta name="theme-color" content="#7952b3">
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="./css/sidebars.css" rel="stylesheet">
+  <link href="./css/index.css" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <div id="offcanvasLeft" class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white" style="width: 380px;">
+
+      <div
+        class="d-flex align-items-center justify-content-between flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+        <span class="fs-5 fw-semibold">My Notes</span>
+        <div class="actions">
+
+          <button id="refresh-notes" type="button" class="btn btn-outline-primary btn-lg btn-floating"
+            data-bs-toggle="tooltip" data-bs-placement="top" title="Refresh all notes">
+            <i class="fas fa-sync"></i>
+          </button>
+          <button id="delete-notes" type="button" class="btn btn-outline-danger btn-lg btn-floating"
+            data-bs-toggle="tooltip" data-bs-placement="top" title="Delete all notes">
+            <i class="fas fa-trash"></i>
+          </button>
+          <button id="new-note" type="button" class="btn btn btn-outline-dark btn-lg btn-floating"
+            data-bs-toggle="tooltip" data-bs-placement="top" title="New note">
+            <i class="fas fa-plus"></i>
+          </button>
+
+        </div>
+      </div>
+
+      <div id="notes-list" class="list-group list-group-flush border-bottom scrollarea"></div>
+
+    </div>
+
+    <div id="note-form" class="container-fluid"></div>
+  </main>
+
+  <script src="./js/index.js" type="module"></script>
+
+</body>
+
+</html>
