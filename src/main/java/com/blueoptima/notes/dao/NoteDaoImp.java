@@ -11,6 +11,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaUpdate;
 import javax.persistence.criteria.Root;
 import java.time.LocalTime;
+import java.time.ZoneId;
 import java.util.List;
 
 @Repository
@@ -50,7 +51,7 @@ public class NoteDaoImp implements NoteDao{
     @Override
     public void updateNote(int noteId, Note modifyNote) {
         Note note = (Note) entityManager.find(Note.class, noteId);
-        LocalTime now = LocalTime.now();
+        LocalTime now = LocalTime.now(ZoneId.of("America/Mexico_City"));
 
         note.setTitle(modifyNote.getTitle());
         note.setContent(modifyNote.getContent());
