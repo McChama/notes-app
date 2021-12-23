@@ -1,6 +1,8 @@
 package com.blueoptima.notes.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.LocalTime;
 
 @Entity
@@ -13,9 +15,11 @@ public class Note {
     private int id;
 
     @Column(name = "TITLE")
+    @NotEmpty
     private String title;
 
     @Column(name = "CONTENT")
+    @NotEmpty
     private String content;
 
     @Column(name = "CREATED_AT")
