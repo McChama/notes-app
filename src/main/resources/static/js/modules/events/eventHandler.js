@@ -34,11 +34,18 @@ export const enableSidebarButtons = () => {
 }
 const createNote = () => {
     const btnNewNote = document.querySelector('#new-note');
+    const noNote = document.querySelector('#no-note');
     btnNewNote.addEventListener('click', () => {
         if (widerScreenWidth.matches) hideSidebar();
         newNote();
         newNoteEvents();
     });
+    if (noNote)
+        noNote.addEventListener('click', () => {
+            if (widerScreenWidth.matches) hideSidebar();
+            newNote();
+            newNoteEvents();
+        });
 }
 const deleteAllNotes = () => {
     const btnDeleteNotes = document.querySelector('#delete-notes');
@@ -78,9 +85,13 @@ const deleteNote = () => {
 const discardNote = () => {
     const btnDiscard = document.querySelector('#discard');
     btnDiscard.addEventListener('click', () => {
-        document.querySelector('#note-form').innerHTML = '';
+        hideNoteForm();
         showSidebar();
     });
+}
+const hideNoteForm = () => {
+    document.querySelector('#note-form').innerHTML = '';
+    document.querySelector('#alerts').innerHTML = '';
 }
 
 /* Events loader */

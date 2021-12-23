@@ -7,7 +7,7 @@ const notesList = (notes) => {
     if (notes.length === 0) {
         disableSidebarButtons();
         htmlNotes += `
-            <div class="list-group-item list-group-item-action py-3 lh-tight">
+            <div id="no-note" class="list-group-item list-group-item-action py-3 lh-tight">
                 <div class="d-flex w-100 align-items-center justify-content-between">
                     <strong class="mb-1">You haven't any notes yet</strong>
                 </div>
