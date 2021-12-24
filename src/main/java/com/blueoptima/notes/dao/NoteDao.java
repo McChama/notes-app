@@ -12,11 +12,11 @@ public interface NoteDao {
 
     void createNote(Note note);
 
-    void updateNote(int noteId, Note note);
+    Note updateNote(int noteId, Note note);
 
-    void updateAllNotes();
+    int updateAllNotes();
 
     void deleteNote(int noteId);
 
-    void deleteAllNotes();
+    int deleteAllNotes();
 }
