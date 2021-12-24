@@ -2,8 +2,8 @@ package com.blueoptima.notes.models;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 import java.time.LocalTime;
+import java.time.ZoneId;
 
 @Entity
 @Table(name = "NOTE")
@@ -27,6 +27,19 @@ public class Note {
 
     @Column(name = "UPDATED_AT")
     private LocalTime updatedAt;
+
+    public Note(){
+
+    }
+
+    public Note(int id, String title, String content) {
+        LocalTime now = LocalTime.now(ZoneId.of("America/Mexico_City"));
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.createdAt = now;
+        this.updatedAt = now;
+    }
 
     public int getId() {
         return id;
