@@ -2,7 +2,7 @@ import { deleteDataFrom, getDataFrom, postDataFrom, putDataFrom } from "../utils
 
 class API_NOTES {
   constructor () {
-    if (API_NOTES.instance) return this
+    if (API_NOTES.instance) return API_NOTES.instance
 
     API_NOTES.instance = this
     this.base_uri = 'api/notes/'
