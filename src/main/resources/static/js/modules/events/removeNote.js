@@ -1,7 +1,7 @@
-import deleteNote from "../api/deleteNote.js";
+import API from "../api/api.js";
 
 const removeNote = (noteId) => {
-    deleteNote(noteId);
+    API.deleteNote(noteId);
     window.location.reload();
 };
 export default removeNote;

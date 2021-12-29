@@ -1,4 +1,4 @@
-import getNote from "../api/getNote.js";
+import API from "../api/api.js";
 import newNote from "../views/newNote.js";
 import noteForm from "../views/noteForm.js";
 import modifyNote from "./modifyNote.js";
@@ -59,7 +59,7 @@ const selectNote = () => {
     const noteList = document.querySelectorAll(".list-group-item");
     noteList.forEach(note => {
         note.addEventListener("focus", async e => {
-            const note = await getNote(e.target.attributes.value.nodeValue)
+            const note = await API.getNote(e.target.attributes.value.nodeValue)
             if (widerScreenWidth.matches) hideSidebar();
             noteForm(note);
             noteFormEvents();
