@@ -1,4 +1,4 @@
-import { deleteDataFrom, getDataFrom, postDataFrom, putDataFrom } from "../utils/network";
+import { deleteDataFrom, getDataFrom, postDataFrom, putDataFrom } from "../utils/network.js";
 
 class API_NOTES {
   constructor () {
