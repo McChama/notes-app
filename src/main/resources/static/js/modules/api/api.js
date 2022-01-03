@@ -27,7 +27,7 @@ class API_NOTES {
 
   putNote = async (note) => {
     const noteInJSON = JSON.stringify(note);
-    return await putDataFrom(`${this.base_uri}${noteId}`, noteInJSON);
+    return await putDataFrom(`${this.base_uri}${note.id}`, noteInJSON);
   };
 
   putNotes = async () => {
