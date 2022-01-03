@@ -1,7 +1,7 @@
-import putNotes from "../api/putNotes.js";
+import API from "../api/api.js";
 
 const updateNotes = () => {
-    putNotes();
+    API.putNotes();
     window.location.reload();
 };
 export default updateNotes;

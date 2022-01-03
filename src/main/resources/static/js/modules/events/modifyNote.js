@@ -1,4 +1,4 @@
-import putNote from "../api/putNote.js";
+import API from "../api/api.js";
 import validateNote from "../utils/validateNote.js";
 import showAlert from "./showAlert.js";
 
@@ -9,7 +9,7 @@ const modifyNote = noteId => {
         content: document.querySelector("#content").value,
     }
     if (validateNote(NOTE)){
-        putNote(NOTE);
+        API.putNote(NOTE);
         window.location.reload();
     }
     else

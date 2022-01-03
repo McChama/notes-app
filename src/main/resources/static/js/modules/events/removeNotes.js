@@ -1,7 +1,7 @@
-import deleteNotes from "../api/deleteNotes.js";
+import API from "../api/api.js";
 
 const removeNotes = () => {
-    deleteNotes();
+    API.deleteNotes();
     window.location.reload();
 };
 export default removeNotes;

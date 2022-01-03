@@ -1,4 +1,4 @@
-import postNote from "../api/postNote.js";
+import API from "../api/api.js";
 import showAlert from "./showAlert.js";
 import validateNote from "../utils/validateNote.js";
 
@@ -9,7 +9,7 @@ const saveNewNote = () => {
     }
 
     if (validateNote(NOTE)){
-        postNote(NOTE);
+        API.postNote(NOTE);
         window.location.reload();
     }
     else
