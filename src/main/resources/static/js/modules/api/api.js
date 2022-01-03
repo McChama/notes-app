@@ -25,8 +25,9 @@ class API_NOTES {
     return await deleteDataFrom(this.base_uri)
   };
 
-  putNote = async () => {
-    return await putDataFrom(this.bulkUpdate_notes_uri)
+  putNote = async (note) => {
+    const noteInJSON = JSON.stringify(note);
+    return await putDataFrom(`${this.base_uri}${noteId}`, noteInJSON);
   };
 
   putNotes = async () => {

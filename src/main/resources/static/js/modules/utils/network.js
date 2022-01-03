@@ -9,8 +9,8 @@ export const getDataFrom = async uri => {
   return data;
 };
 
-export const putDataFrom = async uri => {
-  return await _handlerFetch({ method: 'PUT', uri });
+export const putDataFrom = async (uri, body = {}) => {
+  return await _handlerFetch({ args: { body }, method: 'PUT', uri });
 }
 
 export const postDataFrom = async (uri, body = {}) => {
